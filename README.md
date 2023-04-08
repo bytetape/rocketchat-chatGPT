@@ -1,4 +1,4 @@
-# 如何在开源聊天工具中使用chatGPT
+# 在开源聊天工具中使用chatGPT
 <table style="border-collapse: collapse;">
   <tr>
     <td style="border: none;"><img src="https://user-images.githubusercontent.com/130202349/230718521-517d13eb-7cad-41f4-8dbb-e7e7ce3206e1.png" height="200"></td>
