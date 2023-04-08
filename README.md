@@ -1,4 +1,11 @@
 # 如何在开源聊天工具中使用chatGPT
+<table style="border-collapse: collapse;">
+  <tr>
+    <td style="border: none;"><img src="https://user-images.githubusercontent.com/130202349/230718521-517d13eb-7cad-41f4-8dbb-e7e7ce3206e1.png" height="200"></td>
+    <td style="border: none;"><img src="https://user-images.githubusercontent.com/130202349/230718323-9d70a89a-6830-46ca-8240-9c1df15ca5bd.jpg" height="200"></td>
+    <td style="border: none;"><img src="https://user-images.githubusercontent.com/130202349/230718174-0c408dc3-d8fb-4e72-a581-f898b1c06bc9.png" height="200"></td>
+  </tr>
+</table>
 
 这是通过使用hubot机器人使用chatGPT API来实现在rocketchat中使用chatGPT的方法。
 
