@@ -15,3 +15,4 @@ cd /opt/rocketchat_chatGPT
 sudo apt install -y nodejs
 sudo apt install -y npm
 sudo npm install --only=production
+sudo npm install node-fetch --save
