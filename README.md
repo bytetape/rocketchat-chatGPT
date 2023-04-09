@@ -11,12 +11,29 @@
 
 需要使用境外服务器（当然也可以使用境内rocketchat+境外hubot两台服务器），下面以Debian系统安装为例。
 
-## 1. 安装Docker Compose
 **推荐使用下面的一键脚本安装**
+
+## 1. 运行下面命令
 ```
-curl -sSL https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/installDockerCompose_debian.sh | sh
+curl -sSL https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/installDockerComposeAndRocketchat_debian.sh | sh
 ```
+## 2. 配置rocketchat
+1. 使用**http://[你的服务器IP]:3000**进入rocketchat界面。
+
+2. 用自己邮箱注册rocketchat账号后，记得回到邮箱点Verify registration！
+
+3. 创建一个机器人，命名为“chatGPT”, 密码chatGPT，这里名字和密码和下一步的.env文件要保持一致，Roles选择bot。
+
+## 3. 运行下面命令
+```
+curl -sSL https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/installHubotWithChatGPT_debian.sh | sh
+```
+
+---
+
 如果一键脚本不成功再用下面手动安装
+
+### 1. 安装Docker Compose
 ```
 sudo -i
 apt-get update
@@ -63,7 +80,7 @@ Docker version 23.0.3, build 3e7cbfd
 root@VM-4-2-debian:~# docker-compose --version
 Docker Compose version v2.17.2
 ```
-## 2. 安装rocketchat
+### 2. 安装rocketchat
 1. 直接使用官方yml文件安装
 ```
 curl -LJO https://raw.githubusercontent.com/RocketChat/Docker.Official.Image/master/compose.yml
@@ -74,7 +91,7 @@ sudo docker-compose up -d
 3. 用自己邮箱注册rocketchat账号后，记得回到邮箱点Verify registration！
 
 4. 创建一个机器人，命名为“chatGPT”, 密码chatGPT，这里名字和密码和下一步的.env文件要保持一致，Roles选择bot。
-## 3. 安装hubot机器人
+### 3. 安装hubot机器人
 安装Node.js和npm
 ```
 curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
