@@ -12,6 +12,11 @@
 需要使用境外服务器（当然也可以使用境内rocketchat+境外hubot两台服务器），下面以Debian系统安装为例。
 
 ## 1. 安装Docker Compose
+**推荐使用下面的一键脚本安装**
+```
+curl -sSL https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/installDockerCompose_debian.sh | sh
+```
+如果一键脚本不成功再用下面手动安装
 ```
 sudo -i
 apt-get update
