@@ -37,6 +37,7 @@
 sudo apt-get update && \
 sudo apt update && sudo apt upgrade -y && \
 sudo apt install curl sudo git -y && \
+sudo rm -rf hubot-rocketchat-boilerplate && \
 sudo git clone https://github.com/RocketChat/hubot-rocketchat-boilerplate && \
 cd hubot-rocketchat-boilerplate && \
 sudo npm install && \
