@@ -54,7 +54,7 @@ cd /opt/rocketchat_chatGPT && chmod +x bin/hubot && source .env && bin/hubot -a 
 
 先使用Ctrl+C终止进程，输入下面命令
 ```
-source .env;bin/hubot -a rocketchat & disown -h
+cd /opt/rocketchat_chatGPT && source .env;bin/hubot -a rocketchat > file.all 2>&1 & disown -h
 ```
 后续如果需要关闭进程可用下面命令找到后台进程，并kill
 ```
