@@ -11,3 +11,5 @@ sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 docker --version
 docker-compose --version
+curl -LJO https://raw.githubusercontent.com/RocketChat/Docker.Official.Image/master/compose.yml
+sudo docker-compose up -d
