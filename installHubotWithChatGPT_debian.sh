@@ -1,6 +1,6 @@
 #!/bin/bash
+
 #更新系统软件包
-sudo apt-get update
 sudo apt update && sudo apt upgrade -y
 
 #安装必要的软件包
@@ -12,5 +12,6 @@ sudo git clone https://github.com/bytetape/rocketchat_chatGPT /opt/rocketchat_ch
 
 #安装依赖包
 cd /opt/rocketchat_chatGPT
-sudo npm install
-sudo npm install node-fetch --save
+sudo apt install -y nodejs
+sudo apt install -y npm
+sudo npm ci --only=production
