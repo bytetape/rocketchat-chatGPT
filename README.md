@@ -1,4 +1,4 @@
-# 在开源聊天工具中使用chatGPT
+# 在开源聊天工具rocketchat中使用chatGPT
 <table style="border-collapse: collapse;">
   <tr>
     <td style="border: none;"><img src="https://user-images.githubusercontent.com/130202349/230718521-517d13eb-7cad-41f4-8dbb-e7e7ce3206e1.png" height="200"></td>
@@ -13,7 +13,7 @@
 
 **推荐使用下面的一键脚本安装**
 
-## 1. 运行下面命令
+## 1. 安装rocketchat
 ```
 curl -sSL https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/installDockerComposeAndRocketchat_debian.sh | sh
 ```
@@ -27,7 +27,7 @@ curl -sSL https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/ins
 3. 回到rocketchat创建一个机器人，命名为“chatGPT”, 密码chatGPT，这里名字和密码和.env文件里的配置要保持一致，Roles选择bot。
 <img src="https://user-images.githubusercontent.com/130202349/230774208-63aa933c-a86d-4c2d-a40f-a01e0a1b9bff.jpg" alt="1" height="200">
 
-## 3. 运行下面命令
+## 3. 安装hubot机器人
 ```
 curl -sSL https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/installHubotWithChatGPT_debian.sh | sh
 ```
@@ -35,7 +35,7 @@ curl -sSL https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/ins
 
 运行下面代码修改openAI_API
 ```
-# 替换 API 密钥
+# 填写openAI API
 cd /opt/rocketchat_chatGPT
 read -p "请输入 openAI API:" API && \
 sudo sed -i "s/YOUR API KEY/$API/g" /opt/rocketchat_chatGPT/scripts/script_chatGPT.js
