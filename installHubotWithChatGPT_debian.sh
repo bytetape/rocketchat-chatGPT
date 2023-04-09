@@ -41,9 +41,9 @@ sudo rm -rf hubot-rocketchat-boilerplate
 sudo git clone https://github.com/RocketChat/hubot-rocketchat-boilerplate
 cd hubot-rocketchat-boilerplate
 sudo npm install
-npm install mkdirp@latest
-npm install connect@latest
-npm install coffeescript@latest
+sudo npm install mkdirp@latest
+sudo npm install connect@latest
+sudo npm install coffeescript@latest
 sudo npm install node-fetch --save
 sudo curl -sSL -o .env https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/.env
 sudo curl -sSL -o scripts/script_chatGPT.js https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/script_chatGPT.js
