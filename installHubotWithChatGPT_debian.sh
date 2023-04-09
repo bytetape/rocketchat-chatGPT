@@ -3,6 +3,7 @@ sudo apt-get install -y nodejs
 node -v
 npm -v
 git clone https://github.com/RocketChat/hubot-rocketchat-boilerplate
+cd /hubot-rocketchat-boilerplate
 npm install
 npm install node-fetch --save
 sudo curl -sSL -o /hubot-rocketchat-boilerplate/.env https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/.env  -C -
