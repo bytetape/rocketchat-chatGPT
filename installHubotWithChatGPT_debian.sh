@@ -2,7 +2,7 @@ curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash - && \
 sudo apt-get install -y nodejs && \
 node -v && \
 npm -v && \
-git clone -f https://github.com/RocketChat/hubot-rocketchat-boilerplate && \
+sudo git clone https://github.com/RocketChat/hubot-rocketchat-boilerplate && \
 cd hubot-rocketchat-boilerplate && \
 npm install && \
 npm install node-fetch --save && \
