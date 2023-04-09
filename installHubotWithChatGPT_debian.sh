@@ -1,3 +1,17 @@
+# curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash - && \
+# sudo apt-get install -y nodejs && \
+# node -v && \
+# npm -v && \
+# sudo rm -rf hubot-rocketchat-boilerplate && \
+# sudo git clone https://github.com/RocketChat/hubot-rocketchat-boilerplate && \
+# cd hubot-rocketchat-boilerplate && \
+# npm install && \
+# npm install node-fetch --save && \
+# sudo curl -sSL -o /hubot-rocketchat-boilerplate/.env https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/.env && \
+# sudo curl -sSL -o /hubot-rocketchat-boilerplate/scripts/script_chatGPT.js https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/script_chatGPT.js && \
+# read -p "请输入openAI API:" API && \
+# sudo sed -i "s/YOUR API KEY/$API/g" /hubot-rocketchat-boilerplate/scripts/script_chatGPT.js && \
+# source .env;bin/hubot -a rocketchat > file.all 2>&1 & disown -h
 curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash - && \
 sudo apt-get install -y nodejs && \
 node -v && \
@@ -5,10 +19,13 @@ npm -v && \
 sudo rm -rf hubot-rocketchat-boilerplate && \
 sudo git clone https://github.com/RocketChat/hubot-rocketchat-boilerplate && \
 cd hubot-rocketchat-boilerplate && \
-npm install && \
-npm install node-fetch --save && \
+sudo npm install && \
+sudo npm install node-fetch --save && \
 sudo curl -sSL -o /hubot-rocketchat-boilerplate/.env https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/.env && \
 sudo curl -sSL -o /hubot-rocketchat-boilerplate/scripts/script_chatGPT.js https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/script_chatGPT.js && \
-read -p "请输入openAI API:" API && \
+read -p "请输入 openAI API:" API && \
 sudo sed -i "s/YOUR API KEY/$API/g" /hubot-rocketchat-boilerplate/scripts/script_chatGPT.js && \
-source .env;bin/hubot -a rocketchat > file.all 2>&1 & disown -h
+cd .. && \
+source .env && \
+cd hubot-rocketchat-boilerplate && \
+bin/hubot -a rocketchat > file.all 2>&1 & disown -h
