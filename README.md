@@ -9,7 +9,7 @@
 
 这是通过使用hubot机器人使用chatGPT API来实现在rocketchat中使用chatGPT的方法。
 
-需要使用境外服务器（当然也可以使用境内rocketchat+境外hubot两台服务器），下面以Debian系统安装为例。
+需要使用境外服务器（当然也可以使用境内rocketchat+境外hubot两台服务器），下面以**Debian 11系统**安装为例。
 
 **推荐使用下面的一键脚本安装**
 
