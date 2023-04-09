@@ -12,10 +12,12 @@
 # read -p "请输入openAI API:" API && \
 # sudo sed -i "s/YOUR API KEY/$API/g" /hubot-rocketchat-boilerplate/scripts/script_chatGPT.js && \
 # source .env;bin/hubot -a rocketchat > file.all 2>&1 & disown -h
-curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash - && \
+
+sudo apt update && sudo apt upgrade -y && \
+sudo apt install curl sudo && \
+curl -sL https://deb.nodesource.com/setup_current.x | sudo -E bash - && \
 sudo apt-get install -y nodejs && \
-node -v && \
-npm -v && \
+sudo npm install -g npm && \
 sudo rm -rf hubot-rocketchat-boilerplate && \
 sudo git clone https://github.com/RocketChat/hubot-rocketchat-boilerplate && \
 cd hubot-rocketchat-boilerplate && \
