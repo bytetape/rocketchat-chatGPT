@@ -18,11 +18,11 @@
 curl -sSL https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/installDockerComposeAndRocketchat_debian.sh | sh
 ```
 ## 2. 配置rocketchat
-1. 使用**http://[你的服务器IP]:3000**进入rocketchat界面。
+1. 使用**http://[你的服务器IP]:3000**进入rocketchat界面（可能要等待刷新几十秒）。
 
-2. 用自己邮箱注册rocketchat账号后，记得回到邮箱点Verify registration！
+2. 完成step1-3的**Admin Info**信息维护，中间弹出的警告点“是”。完成信息维护后记得回到邮箱点Verify registration！
 
-3. 创建一个机器人，命名为“chatGPT”, 密码chatGPT，这里名字和密码和下一步的.env文件要保持一致，Roles选择bot。
+3. 回到rocketchat创建一个机器人，命名为“chatGPT”, 密码chatGPT，这里名字和密码和.env文件里的配置要保持一致，Roles选择bot。
 
 ## 3. 运行下面命令
 ```
