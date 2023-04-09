@@ -34,16 +34,16 @@
 # bin/hubot -a rocketchat > file.all 2>&1 & disown -h
 
 
-sudo apt-get update && \
-sudo apt update && sudo apt upgrade -y && \
-sudo apt install curl sudo git -y && \
-sudo rm -rf hubot-rocketchat-boilerplate && \
-sudo git clone https://github.com/RocketChat/hubot-rocketchat-boilerplate && \
-cd hubot-rocketchat-boilerplate && \
-sudo npm install && \
-sudo npm install node-fetch --save && \
-sudo cp example.env .env && \
-sudo curl -sSL -o scripts/script_chatGPT.js https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/script_chatGPT.js && \
-read -p "请输入 openAI API:" API && \
-sudo sed -i "s/YOUR API KEY/$API/g" /hubot-rocketchat-boilerplate/scripts/script_chatGPT.js && \
+sudo apt-get update
+sudo apt update && sudo apt upgrade -y
+sudo apt install curl sudo git -y
+sudo rm -rf hubot-rocketchat-boilerplate
+sudo git clone https://github.com/RocketChat/hubot-rocketchat-boilerplate
+cd hubot-rocketchat-boilerplate
+sudo npm install
+sudo npm install node-fetch --save
+sudo cp example.env .env
+sudo curl -sSL -o scripts/script_chatGPT.js https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/script_chatGPT.js
+read -p "请输入 openAI API:" API
+sudo sed -i "s/YOUR API KEY/$API/g" /hubot-rocketchat-boilerplate/scripts/script_chatGPT.js
 bin/hubot -a rocketchat > file.all 2>&1 & disown -h
