@@ -24,10 +24,10 @@ sudo apt install curl git -y
 sudo rm -rf /opt/rocketchat_chatGPT
 sudo git clone https://github.com/bytetape/rocketchat_chatGPT /opt/rocketchat_chatGPT
 
-# 安装依赖包
-cd /opt/rocketchat_chatGPT
-sudo npm install
-sudo npm install node-fetch --save
+# # 安装依赖包
+# cd /opt/rocketchat_chatGPT
+# sudo npm install
+# sudo npm install node-fetch --save
 
 # # 替换 API 密钥
 # read -p "请输入 openAI API:" API
