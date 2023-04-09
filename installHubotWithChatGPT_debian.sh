@@ -43,6 +43,6 @@ sudo npm install
 sudo npm install node-fetch --save
 read -p "请输入 openAI API:" API && \
 sudo sed -i "s/YOUR API KEY/$API/g" ~/rocketchat_chatGPT/scripts/script_chatGPT.js
-sudo source ~/rocketchat_chatGPT/.env
-# sudo ~/rocketchat_chatGPT/bin/hubot -a rocketchat & disown -h
-sudo ~/rocketchat_chatGPT/bin/hubot -a rocketchat
+source ~/rocketchat_chatGPT/.env
+#~/rocketchat_chatGPT/bin/hubot -a rocketchat & disown -h
+~/rocketchat_chatGPT/bin/hubot -a rocketchat
