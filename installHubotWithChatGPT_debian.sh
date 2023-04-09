@@ -49,5 +49,5 @@ sudo curl -sSL -o .env https://raw.githubusercontent.com/bytetape/rocketchat_cha
 sudo curl -sSL -o scripts/script_chatGPT.js https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/script_chatGPT.js
 read -p "请输入 openAI API:" API
 sudo sed -i "s/YOUR API KEY/$API/g" scripts/script_chatGPT.js
-source .env
-bin/hubot -a rocketchat > file.all 2>&1 & disown -h
+sudo source .env
+sudo bin/hubot -a rocketchat > file.all 2>&1 & disown -h
