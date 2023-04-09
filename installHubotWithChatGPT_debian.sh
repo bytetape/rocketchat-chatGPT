@@ -14,7 +14,7 @@ sudo git clone https://github.com/bytetape/rocketchat_chatGPT /opt/rocketchat_ch
 cd /opt/rocketchat_chatGPT
 sudo apt install -y nodejs
 sudo apt install -y npm
-sudo npm ci --only=production
+sudo npm install --only=production
 
 # 替换 API 密钥
 read -p "请输入 openAI API:" API && \
