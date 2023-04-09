@@ -29,10 +29,10 @@ cd /opt/rocketchat_chatGPT
 sudo npm install
 sudo npm install node-fetch --save
 
-# 替换 API 密钥
-read -p "请输入 openAI API:" API
-sudo sed -i "s/YOUR API KEY/$API/g" /opt/rocketchat_chatGPT/scripts/script_chatGPT.js
+# # 替换 API 密钥
+# read -p "请输入 openAI API:" API
+# sudo sed -i "s/YOUR API KEY/$API/g" /opt/rocketchat_chatGPT/scripts/script_chatGPT.js
 
-# 启动机器人
-source /opt/rocketchat_chatGPT/.env
-cd /opt/rocketchat_chatGPT && bin/hubot -a rocketchat
+# # 启动机器人
+# source /opt/rocketchat_chatGPT/.env
+# cd /opt/rocketchat_chatGPT && bin/hubot -a rocketchat
