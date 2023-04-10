@@ -2,7 +2,7 @@ let fetch;
 import('node-fetch').then(module => fetch = module.default);
 
 const API_ENDPOINT = "https://api.openai.com/v1/chat/completions";
-const API_KEY = process.env.OPENAI_API_KEY;
+const API_KEY = "YOUR API KEY";
 const MODEL = "gpt-3.5-turbo";
 const maxDialogueCount = 10; // 传递给机器人的最大对话条数。
 const maxDialogueLength = 1000; // 传递给机器人的最大对话字符数。
