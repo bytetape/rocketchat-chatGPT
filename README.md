@@ -31,33 +31,23 @@ curl -sSL https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/ins
 ```
 curl -sSL https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/installHubotWithChatGPT_debian.sh | sh
 ```
-<img src="https://user-images.githubusercontent.com/130202349/230774175-26330460-ee6a-485b-958f-2b45c4f30ca5.jpg" alt="1" height="200">
-
-运行下面代码修改openAI_API
-```
-# 填写openAI API
-cd /opt/rocketchat_chatGPT
-read -p "请输入 openAI API:" API && \
-sudo sed -i "s/YOUR API KEY/$API/g" /opt/rocketchat_chatGPT/scripts/script_chatGPT.js
-```
-启动机器人
-```
-# 启动机器人
-source /opt/rocketchat_chatGPT/.env
-cd /opt/rocketchat_chatGPT && chmod +x bin/hubot && source .env && bin/hubot -a rocketchat
-```
 <img src="https://user-images.githubusercontent.com/130202349/230774136-98ded94f-517a-4421-a719-1efd6cbaf861.jpg" alt="1" height="200">
 
 ---
 
-需要注意的是如果我们关闭了SSH客户端，此时正在运行的进程也会中断。解决方法就是把进程转入后台，操作如下：
+需要注意的是如果我们关闭了SSH客户端，此时正在运行的进程也会中断，chatGPT也就不能用了。解决方法就是把进程转入后台，操作如下：
 
 先使用Ctrl+C终止进程，输入下面命令
 ```
-cd /opt/rocketchat_chatGPT && source .env;bin/hubot -a rocketchat > file.all 2>&1 & disown -h
+cd /opt/rocketchat_chatGPT
+source .env;bin/hubot -a rocketchat > file.all 2>&1 & disown -h
 ```
-后续如果需要关闭进程可用下面命令找到后台进程，并kill
+后续如果需要关闭进程可用下面命令找到后台进程，并kill杀掉进程
 ```
 ps -ef | grep hubot
 kill <进程号>
+```
+如要调试需要在SSH客户端显示内容，则用下面命令来启动机器人
+```
+cd /opt/rocketchat_chatGPT && chmod +x bin/hubot && source .env && bin/hubot -a rocketchat
 ```
