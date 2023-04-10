@@ -25,5 +25,4 @@ sudo sed -i "s/YOUR API KEY/$API/g" /opt/rocketchat_chatGPT/scripts/script_chatG
 sudo sed -i "s/YOUR API KEY/$OPENAI_API_KEY/g" /opt/rocketchat_chatGPT/scripts/script_chatGPT.js
 
 # 启动机器人
-source /opt/rocketchat_chatGPT/.env
-cd /opt/rocketchat_chatGPT && chmod +x bin/hubot && source .env && bin/hubot -a rocketchat
+bash -c "source /opt/rocketchat_chatGPT/.env && cd /opt/rocketchat_chatGPT && chmod +x bin/hubot && source .env && bin/hubot -a rocketchat"
