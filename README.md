@@ -37,7 +37,7 @@ curl -sSL https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/ins
 
 需要注意的是如果我们关闭了SSH客户端，此时正在运行的进程也会中断，chatGPT也就不能用了。解决方法就是把进程转入后台，操作如下：
 
-先使用Ctrl+C终止进程，输入下面命令
+先使用Ctrl+C终止进程，输入下面命令即把进程转入后台。此时可以关闭SSH客户端了。
 ```
 cd /opt/rocketchat_chatGPT
 source .env;bin/hubot -a rocketchat > file.all 2>&1 & disown -h
@@ -47,7 +47,7 @@ source .env;bin/hubot -a rocketchat > file.all 2>&1 & disown -h
 ps -ef | grep hubot
 kill <进程号>
 ```
-如要调试需要在SSH客户端显示内容，则用下面命令来启动机器人
+如要调试时需要在SSH客户端显示内容，则用下面命令来启动机器人。
 ```
 cd /opt/rocketchat_chatGPT && chmod +x bin/hubot && source .env && bin/hubot -a rocketchat
 ```
