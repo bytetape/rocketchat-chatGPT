@@ -17,6 +17,8 @@
 ```
 curl -sSL https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/installDockerComposeAndRocketchat_debian.sh | sh
 ```
+到这里就完成了
+
 <img src="https://user-images.githubusercontent.com/130202349/230774254-82cfe3af-8375-42ae-b9a7-4a4f16ed5625.jpg" alt="1" height="200">
 
 ## 2. 配置rocketchat
@@ -31,6 +33,12 @@ curl -sSL https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/ins
 ```
 curl -sSL https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/installHubotWithChatGPT_debian.sh | sh
 ```
+在这里填入openAI API
+
+<img src="https://user-images.githubusercontent.com/130202349/230945105-9cca0701-a1c3-4316-a95b-df1a412a0372.png" alt="1" height="200">
+
+到这里就完成了
+
 <img src="https://user-images.githubusercontent.com/130202349/230774136-98ded94f-517a-4421-a719-1efd6cbaf861.jpg" alt="1" height="200">
 
 ---
