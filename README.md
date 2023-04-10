@@ -11,8 +11,6 @@
 
 需要使用境外服务器（当然也可以使用境内rocketchat+境外hubot两台服务器），下面以**Debian 11系统**安装为例。
 
-**推荐使用下面的一键脚本安装**
-
 ## 1. 安装rocketchat
 ```
 curl -sSL https://raw.githubusercontent.com/bytetape/rocketchat_chatGPT/main/installDockerComposeAndRocketchat_debian.sh | sh
